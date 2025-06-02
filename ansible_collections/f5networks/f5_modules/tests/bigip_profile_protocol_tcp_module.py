@@ -47,13 +47,12 @@ options:
 '''
 
 EXAMPLES = r'''
-- name: Affiche la running config
-  register: running_conf
-  my_namespace.send_command.module_fn_ssh:
-    cmd : "show run\n"
-    ip : "1.1.1.1"
-    username : "my_login"
-    password : "my_password"
+- name: Manage the profile protocol tcp
+  F5Networks.f5-ansible-f5modules.module_bigip_profile_protocol_tcp_module:
+    ip = "1.1.1.4"
+    username = "myadmin"
+    password = "mypass"
+    tcp_params = "{{tcp_params}}"
 '''
 
 

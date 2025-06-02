@@ -47,13 +47,12 @@ options:
 '''
 
 EXAMPLES = r'''
-- name: Affiche la running config
-  register: running_conf
-  my_namespace.send_command.module_fn_ssh:
-    cmd : "show run\n"
-    ip : "1.1.1.1"
-    username : "my_login"
-    password : "my_password"
+- name: manage the server_ssl profile
+  F5Networks.f5-ansible-f5modules.module_bigip_profile_protocol_sslserver_module::
+    ip = "1.1.1.4"
+    username = "myadmin"
+    password = "mypass"
+    sslserver_params = "{{ssl_server_param}}"
 '''
 
 

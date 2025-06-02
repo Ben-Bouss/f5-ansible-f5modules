@@ -84,7 +84,7 @@ options:
 
 EXAMPLES = r'''
 - name: configure un profile persistence hash
-  reseau_modules.forti_f5_modules.module_bigip_persistence_hash:
+  F5Networks.f5-ansible-f5modules.module_bigip_persistence_hash:
     state: "present"
 	ip: "ip_du_f5"
 	username: "toto"
